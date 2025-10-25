@@ -16,7 +16,7 @@ const Navbar = () => {
                 <Link to="/service"> service </Link>
             </li>
             <li className='text-[17px] font-medium '>
-                <Link to="/"> Blog </Link>
+                <Link to="/blog"> Blog </Link>
             </li>
             <li className='text-[17px] font-medium '>
                 <Link to="/what"> what els? </Link>
