@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { TbExternalLinkOff } from 'react-icons/tb'
+import LODING from '../Components/UI/LODING.jsx'
 
 
 const Service = () => {
@@ -16,7 +17,11 @@ const Service = () => {
         <Link className='' to={"/blog"} > Checkout our Blog page for now  </Link>
       <TbExternalLinkOff />
       </div>
-    </div>   
+    </div>  
+
+    <div className="w-full">
+      <LODING/>
+    </div> 
       
     </>
   )

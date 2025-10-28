@@ -9,6 +9,12 @@ import Blog from './Page/Blog.jsx'
 import Service from './Page/Service.jsx'
 import What from './Page/What.jsx'
 import Contact from './Page/Contact.jsx'
+import { Bounce, ToastContainer } from 'react-toastify'
+import Login from './Page/User/Auth/Login.jsx'
+import Register from './Page/User/Auth/Register.jsx'
+
+
+
 
 function App() {
 
@@ -19,8 +25,12 @@ function App() {
         <Route path='/' element={<Layout/>}>
 
         <Route index element={<Home/>}/>
+        <Route path='/login' element={<Login/>}/>
+        <Route path='/register' element={<Register/>}/>
         <Route path='/blog' element={<Blog/>}/>
-        <Route path='/blogDetails' element={<Blogdetails/>}/>
+
+        <Route path='/blogDetails/:blogId' element={<Blogdetails/>}/> 
+
         <Route path='/service' element={<Service/>}/>
         <Route path='/what' element={<What/>}/>
         <Route path='/contact' element={<Contact/>}/>
@@ -37,6 +47,19 @@ function App() {
     <>
 
     <RouterProvider router={shanto}/>
+    <ToastContainer
+    position="top-right"
+    autoClose={5000}
+    hideProgressBar={false}
+    newestOnTop={false}
+    closeOnClick={false}
+    rtl={false}
+    pauseOnFocusLoss
+    draggable
+    pauseOnHover
+    theme="light"
+    transition={Bounce}
+/>
      
     </>
   )
